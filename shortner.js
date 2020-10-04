@@ -7,10 +7,10 @@ const hasha = require("hasha");
 const hashMap = {};
 
 var config = {
-    apiKey: "AIzaSyBAAUCZ8xXzS4r7jxMhlvPB6OzKIC0MRE8",
-    authDomain: "urlshortner-b1883.firebaseapp.com",
-    databaseURL: "https://urlshortner-b1883.firebaseio.com",
-    storageBucket: "urlshortner-b1883.appspot.com",
+    apiKey: "AIzaSyBd_OvqkNSQzhvmizK9aQYW0Nk00QROlAI",
+    authDomain: "url-shortner-102e0.firebaseio.com",
+    databaseURL: "https://url-shortner-102e0.firebaseio.com",
+    storageBucket: "url-shortner-102e0.appspot.com",
 };
 firebase.initializeApp(config);
 
@@ -21,8 +21,8 @@ module.exports = {
 
         hash = hash.replace('/','-');
         hash = hash.replace('+','_');
-        // let hashInt = parseInt(hash,16)
-        // conv = atob(hashInt);
+        //let hashInt = parseInt(hash,16)
+        //conv = atob(hashInt);
         hashMap[hash] = url;
         writeUserData(url,r.from64(hash),hash);
 
